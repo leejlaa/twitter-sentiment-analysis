@@ -1,0 +1,65 @@
+# Twitter Sentiment Analysis
+
+This project analyzes the sentiment of tweets using machine learning and natural language processing techniques.
+
+## Features
+
+- Collects tweets from Twitter using the Twitter API
+- Cleans and preprocesses tweet text
+- Classifies sentiment as positive, negative, or neutral
+- Visualizes sentiment distribution
+
+## Installation
+
+1. Clone the repository:
+    ```
+    git clone https://github.com/yourusername/twitter-sentiment-analysis.git
+    ```
+2. Navigate to the project directory:
+    ```
+    cd twitter-sentiment-analysis
+    ```
+3. Create and activate a virtual environment:
+    ```
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+4. Install dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+1. Set up your Twitter API credentials in a `.env` file.
+2. Run the main script:
+    ```
+    python main.py
+    ```
+3. View results in the output directory.
+
+## Project Structure
+
+- `main.py` - Main script to run sentiment analysis
+- `data/` - Contains datasets and collected tweets
+- `models/` - Trained models and scripts
+- `visualizations/` - Output plots and charts
+
+## Requirements
+
+- Python 3.7+
+- Tweepy
+- Pandas
+- Scikit-learn
+- Matplotlib
+- NLTK
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [Twitter API](https://developer.twitter.com/)
+- [NLTK](https://www.nltk.org/)
+- [Scikit-learn](https://scikit-learn.org/)
