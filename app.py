@@ -9,11 +9,15 @@ model = joblib.load("sentiment_pipeline.sav")
 # Initialize FastAPI
 app = FastAPI(title="Sentiment Analysis API")
 
-# Enable CORS for frontend at http://localhost:3000
+origins = [
+    "https://twitter-sentiment-analysis-five.vercel.app",
+    "http://localhost:3000",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://twitter-sentiment-analysis-five.vercel.app"],  # Next.js frontend
-    allow_credentials=True,
+    allow_origins=origins,
+    allow_credentials=False,   # try False
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -24,6 +28,10 @@ class TextInput(BaseModel):
 
 class BatchInput(BaseModel):
     texts: list[str]
+
+@app.get("/cors-test")
+def cors_test():
+    return {"status": "CORS working"}
 
 # Health check endpoint
 @app.get("/ping")
