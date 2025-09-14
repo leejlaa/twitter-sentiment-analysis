@@ -17,7 +17,10 @@ export default function Home() {
     try {
       const res = await fetch("https://twitter-sentiment-analysis-2w2d.onrender.com/predict", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
         body: JSON.stringify({ text }),
       });
 

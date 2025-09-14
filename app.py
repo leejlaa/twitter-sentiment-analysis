@@ -10,7 +10,7 @@ model = joblib.load("sentiment_pipeline.sav")
 app = FastAPI(title="Sentiment Analysis API")
 
 origins = [
-    "https://twitter-sentiment-analysis-five.vercel.app",
+    "https://twitter-sentiment-analysis-r3wi7v1zh-lejlas-projects-742f7dd9.vercel.app/",
     "http://localhost:3000",
 ]
 
