@@ -12,7 +12,7 @@ app = FastAPI(title="Sentiment Analysis API")
 # Enable CORS for frontend at http://localhost:3000
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Next.js frontend
+    allow_origins=["https://twitter-sentiment-analysis-five.vercel.app"],  # Next.js frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
